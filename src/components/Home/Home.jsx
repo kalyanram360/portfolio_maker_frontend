@@ -137,7 +137,7 @@ const Home = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 fade-in gradient-text">
-              Create Your Professional Portfolio in Minutes
+              Create And Deploy Your Portfolio in Minutes
             </h1>
 
             <p 
