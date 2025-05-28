@@ -692,7 +692,7 @@ const PortfolioForm = () => {
     try {
         const base64Image = await toBase64(file);
 
-        const response = await fetch("http://localhost:3000/json/image", {
+        const response = await fetch("https://portfolio-maker-backend-pnjo.onrender.com/json/image", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
