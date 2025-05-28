@@ -151,7 +151,7 @@ const Home = () => {
 
             <div className="slide-up">
               <a
-                href="dataentry"
+                href="/dataentry"
                 className="inline-block bg-indigo-600 text-white px-8 py-4 rounded-lg text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 animate-pulse-button whitespace-nowrap"
               >
                 Get Started
