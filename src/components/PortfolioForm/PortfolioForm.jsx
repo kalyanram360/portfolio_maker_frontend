@@ -619,7 +619,8 @@ const PortfolioForm = () => {
     },
     home_info: {
       name: '',
-      quote: ''
+      quote: '',
+      resumeUrl: ''
     },
     projects_info: [
       {
@@ -789,7 +790,7 @@ const PortfolioForm = () => {
         setUserId(result.userId); // Backend returns the generated userId
       localStorage.setItem('portfolioUserId', result.userId); 
 
-        alert('Portfolio created successfully!');
+        alert('Data Uploaded successfully!');
         console.log('Success:', result);
         
         // Optional: Reset form or redirect
@@ -907,6 +908,44 @@ const PortfolioForm = () => {
           </div>
 
           <div className="space-y-8">
+            {/* Template Selection */}
+<div className="form-section bg-white rounded-xl shadow-lg p-6 border border-gray-100">
+  <div className="flex items-center mb-6">
+    <Code className="w-6 h-6 text-indigo-600 mr-3" />
+    <h2 className="text-2xl font-bold text-gray-800">Select Template</h2>
+  </div>
+  
+  <div className="grid md:grid-cols-1 gap-6">
+    <div className="border-2 border-indigo-200 rounded-lg p-4 bg-indigo-50/30 hover:border-indigo-400 transition-all cursor-pointer">
+      <div className="flex items-center justify-between">
+        <div className="flex items-center">
+          <input
+            type="radio"
+            id="template1"
+            name="template"
+            value="template1"
+            defaultChecked
+            className="w-4 h-4 text-indigo-600 border-gray-300 focus:ring-indigo-500"
+          />
+          <label htmlFor="template1" className="ml-3 text-lg font-semibold text-gray-800 cursor-pointer">
+            Template 1 - Modern Portfolio
+          </label>
+        </div>
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors"
+        >
+          Preview
+        </a>
+      </div>
+      <p className="text-gray-600 text-sm mt-2 ml-7">
+        Clean and professional design
+      </p>
+    </div>
+  </div>
+</div>
             {/* Personal Information */}
             <div className="form-section bg-white rounded-xl shadow-lg p-6 border border-gray-100">
               <div className="flex items-center mb-6">
@@ -914,7 +953,7 @@ const PortfolioForm = () => {
                 <h2 className="text-2xl font-bold text-gray-800">Personal Information</h2>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid md:grid-cols-3 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
                   <input
@@ -937,6 +976,16 @@ const PortfolioForm = () => {
                     placeholder="Your inspiring quote"
                   />
                 </div>
+                <div>
+    <label className="block text-sm font-medium text-gray-700 mb-2">Resume Drive Link</label>
+    <input
+      type="url"
+      value={formData.home_info.resumeUrl}
+      onChange={(e) => handleInputChange('home_info', 'resumeUrl', e.target.value)}
+      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
+      placeholder="https://your-resume-link"
+    />
+  </div>
                 <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">Upload Profile Image</label>
                     <input
@@ -1199,7 +1248,8 @@ const PortfolioForm = () => {
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Icon URL</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Icon URL | get the url here - <a href='https://devicon.dev/'
+                      className="font-bold underline text-blue-600 hover:text-blue-800 ml-1" >ICONS</a></label>
                       <input
                         type="url"
                         value={skill.icon}
@@ -1274,7 +1324,8 @@ const PortfolioForm = () => {
                     </div>
                     
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">Icon URL</label>
+                      <label className="block text-sm font-medium text-gray-700 mb-2">Icon URL | get the url here - <a href='https://devicon.dev/'
+                      className="font-bold underline text-blue-600 hover:text-blue-800 ml-1" >ICONS</a></label>
                       <input
                         type="url"
                         value={skill.icon}

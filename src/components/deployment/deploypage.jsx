@@ -1264,7 +1264,7 @@ if (!storedUserId || storedUserId === 'null' || storedUserId === 'undefined') {
                   </div>
                 )}
                 <div className="mt-2 text-sm text-gray-600">
-                  Note: It may take a few minutes for GitHub Pages to be fully active.
+                  Note: It may take a 3-4 minutes for GitHub Pages to be fully active.
                 </div>
               </div>
             )}

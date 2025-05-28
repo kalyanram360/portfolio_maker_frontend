@@ -6,7 +6,7 @@ const Header = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <a href="#" className="text-2xl text-indigo-600" style={{ fontFamily: 'Pacifico' }}>
-            logo
+            FolioForge
           </a>
 
           <nav className="flex items-center space-x-8">
@@ -16,24 +16,24 @@ const Header = () => {
             >
               About
             </a>
-            <a
+            {/* <a
               href="#"
               className="text-gray-700 hover:text-indigo-600 transition-colors duration-300 text-sm font-medium"
             >
               Features
-            </a>
+            </a> */}
             <a
               href="#"
               className="text-gray-700 hover:text-indigo-600 transition-colors duration-300 text-sm font-medium"
             >
               Templates
             </a>
-            <a
+            {/* <a
               href="#"
               className="bg-indigo-600 text-white px-5 py-2 rounded-lg hover:bg-indigo-600/90 transition-all duration-300 text-sm font-medium whitespace-nowrap"
             >
               Sign In
-            </a>
+            </a> */}
           </nav>
 
           <button className="md:hidden flex items-center justify-center w-10 h-10 text-gray-700">
