@@ -969,7 +969,7 @@ if (!storedUserId || storedUserId === 'null' || storedUserId === 'undefined') {
   const handleGithubConnect = () => {
     const clientId = "Ov23lipU3NQVbPSKficp";
     const currentFrontendPage = window.location.href;
-    const redirectUri = `http://localhost:3000/json/deploy`;
+    const redirectUri = `https://portfolio-maker-backend-pnjo.onrender.com/json/deploy`;
 
     const githubAuthUrl = `https://github.com/login/oauth/authorize?client_id=${clientId}&redirect_uri=${encodeURIComponent(redirectUri)}&scope=repo%20user&state=${encodeURIComponent(currentFrontendPage)}`;
 
@@ -992,7 +992,7 @@ if (!storedUserId || storedUserId === 'null' || storedUserId === 'undefined') {
 
     try {
       // Call your backend deployment endpoint
-      const response = await fetch('http://localhost:3000/json/deployy', {
+      const response = await fetch('https://portfolio-maker-backend-pnjo.onrender.com/json/deployy', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
