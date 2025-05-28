@@ -967,7 +967,7 @@ if (!storedUserId || storedUserId === 'null' || storedUserId === 'undefined') {
   }, []);
 
   const handleGithubConnect = () => {
-    const clientId = "Ov23lipU3NQVbPSKficp";
+    const clientId = "Ov23liSmD63MVdUYbvXY";
     const currentFrontendPage = window.location.href;
     const redirectUri = `https://portfolio-maker-backend-pnjo.onrender.com/json/deploy`;
 
