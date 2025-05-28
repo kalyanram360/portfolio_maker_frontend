@@ -20,11 +20,11 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: '/dataentry',
+        path: 'dataentry',
         element : <PortfolioForm/>
       },
       {
-        path: '/deploy',
+        path: 'deploy',
         element: <DeploymentPage />
       }
     ],
